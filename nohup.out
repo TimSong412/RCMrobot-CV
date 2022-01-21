@@ -1,0 +1,153 @@
+/home/tim/.local/lib/python3.8/site-packages/visdom/server.py:39: DeprecationWarning: zmq.eventloop.ioloop is deprecated in pyzmq 17. pyzmq now works with default tornado and asyncio eventloops.
+  ioloop.install()  # Needs to happen before any tornado imports!
+INFO:root:Application Started
+/home/tim/.local/lib/python3.8/site-packages/visdom/server.py:39: DeprecationWarning: zmq.eventloop.ioloop is deprecated in pyzmq 17. pyzmq now works with default tornado and asyncio eventloops.
+  ioloop.install()  # Needs to happen before any tornado imports!
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/runpy.py", line 194, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib/python3.8/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/home/tim/.local/lib/python3.8/site-packages/visdom/server.py", line 1922, in <module>
+    download_scripts_and_run()
+  File "/home/tim/.local/lib/python3.8/site-packages/visdom/server.py", line 1918, in download_scripts_and_run
+    main()
+  File "/home/tim/.local/lib/python3.8/site-packages/visdom/server.py", line 1910, in main
+    start_server(port=FLAGS.port, hostname=FLAGS.hostname, base_url=base_url,
+  File "/home/tim/.local/lib/python3.8/site-packages/visdom/server.py", line 1791, in start_server
+    app.listen(port, max_buffer_size=1024 ** 3)
+  File "/home/tim/.local/lib/python3.8/site-packages/tornado/web.py", line 2109, in listen
+    server.listen(port, address)
+  File "/home/tim/.local/lib/python3.8/site-packages/tornado/tcpserver.py", line 151, in listen
+    sockets = bind_sockets(port, address=address)
+  File "/home/tim/.local/lib/python3.8/site-packages/tornado/netutil.py", line 161, in bind_sockets
+    sock.bind(sockaddr)
+OSError: [Errno 98] Address already in use
+Checking for scripts.
+It's Alive!
+INFO:tornado.access:200 POST /env/faster-rcnn (127.0.0.1) 0.43ms
+INFO:tornado.access:200 POST /env/faster-rcnn (127.0.0.1) 0.47ms
+INFO:tornado.access:200 POST /env/faster-rcnn (127.0.0.1) 0.28ms
+INFO:tornado.access:200 POST /env/faster-rcnn (127.0.0.1) 0.28ms
+INFO:tornado.access:200 POST /env/faster-rcnn (127.0.0.1) 0.29ms
+INFO:tornado.access:304 GET / (127.0.0.1) 21.88ms
+INFO:tornado.access:101 GET /socket (127.0.0.1) 0.52ms
+INFO:root:Opened new socket from ip: 127.0.0.1
+INFO:tornado.access:200 POST /env/fasterrcnn (127.0.0.1) 10.75ms
+INFO:tornado.access:200 POST /env/fasterrcnn (127.0.0.1) 9.49ms
+INFO:tornado.access:304 GET /favicon.png (127.0.0.1) 17.50ms
+INFO:tornado.access:304 GET /extensions/MathMenu.js?V=2.7.1 (127.0.0.1) 14.36ms
+INFO:tornado.access:304 GET /extensions/MathZoom.js?V=2.7.1 (127.0.0.1) 15.89ms
+INFO:tornado.access:200 POST /env/faster-rcnn (127.0.0.1) 0.32ms
+INFO:tornado.access:200 POST /env/faster-rcnn (127.0.0.1) 0.37ms
+INFO:tornado.access:200 POST /env/faster-rcnn (127.0.0.1) 0.31ms
+INFO:tornado.access:200 POST /env/faster-rcnn (127.0.0.1) 0.32ms
+INFO:tornado.access:200 POST /env/faster-rcnn (127.0.0.1) 0.30ms
+INFO:tornado.access:200 POST /env/faster-rcnn (127.0.0.1) 0.31ms
+INFO:tornado.access:200 POST /env/faster-rcnn (127.0.0.1) 0.33ms
+INFO:tornado.access:200 POST /env/faster-rcnn (127.0.0.1) 0.32ms
+INFO:tornado.access:200 POST /env/faster-rcnn (127.0.0.1) 0.31ms
+INFO:tornado.access:200 POST /env/faster-rcnn (127.0.0.1) 0.30ms
+INFO:tornado.access:200 POST /env/faster-rcnn (127.0.0.1) 0.34ms
+INFO:tornado.access:200 POST /env/faster-rcnn (127.0.0.1) 0.30ms
+INFO:tornado.access:200 POST /env/faster-rcnn (127.0.0.1) 0.31ms
+INFO:tornado.access:200 POST /env/faster-rcnn (127.0.0.1) 0.33ms
+INFO:tornado.access:200 POST /env/faster-rcnn (127.0.0.1) 0.31ms
+INFO:tornado.access:200 POST /env/faster-rcnn (127.0.0.1) 0.36ms
+INFO:tornado.access:200 POST /env/faster-rcnn (127.0.0.1) 0.30ms
+INFO:tornado.access:200 POST /env/faster-rcnn (127.0.0.1) 0.39ms
+INFO:tornado.access:200 POST /env/faster-rcnn (127.0.0.1) 0.49ms
+INFO:tornado.access:200 POST /env/faster-rcnn (127.0.0.1) 0.35ms
+INFO:tornado.access:200 POST /env/faster-rcnn (127.0.0.1) 0.32ms
+INFO:tornado.access:200 POST /env/faster-rcnn (127.0.0.1) 0.33ms
+INFO:tornado.access:200 POST /env/faster-rcnn (127.0.0.1) 0.42ms
+INFO:tornado.access:200 POST /env/faster-rcnn (127.0.0.1) 0.31ms
+INFO:tornado.access:200 POST /env/faster-rcnn (127.0.0.1) 0.31ms
+INFO:tornado.access:200 POST /env/faster-rcnn (127.0.0.1) 0.29ms
+INFO:tornado.access:200 POST /env/faster-rcnn (127.0.0.1) 0.30ms
+INFO:tornado.access:200 POST /env/faster-rcnn (127.0.0.1) 0.28ms
+INFO:tornado.access:200 POST /env/faster-rcnn (127.0.0.1) 0.32ms
+INFO:tornado.access:200 POST /env/faster-rcnn (127.0.0.1) 0.31ms
+INFO:tornado.access:200 POST /env/faster-rcnn (127.0.0.1) 0.34ms
+INFO:tornado.access:200 POST /env/faster-rcnn (127.0.0.1) 0.34ms
+INFO:tornado.access:200 POST /env/faster-rcnn (127.0.0.1) 0.31ms
+INFO:tornado.access:200 POST /env/faster-rcnn (127.0.0.1) 0.30ms
+INFO:tornado.access:200 POST /env/faster-rcnn (127.0.0.1) 0.65ms
+INFO:tornado.access:200 POST /env/faster-rcnn (127.0.0.1) 0.42ms
+INFO:tornado.access:200 POST /env/faster-rcnn (127.0.0.1) 0.53ms
+INFO:tornado.access:200 POST /env/faster-rcnn (127.0.0.1) 0.42ms
+INFO:tornado.access:200 POST /env/faster-rcnn (127.0.0.1) 0.46ms
+INFO:tornado.access:200 POST /env/faster-rcnn (127.0.0.1) 0.47ms
+INFO:tornado.access:200 POST /env/faster-rcnn (127.0.0.1) 0.53ms
+INFO:tornado.access:200 POST /env/faster-rcnn (127.0.0.1) 0.54ms
+INFO:tornado.access:200 POST /env/faster-rcnn (127.0.0.1) 0.39ms
+INFO:tornado.access:200 POST /env/faster-rcnn (127.0.0.1) 0.52ms
+INFO:tornado.access:200 POST /env/faster-rcnn (127.0.0.1) 0.41ms
+INFO:tornado.access:200 POST /env/faster-rcnn (127.0.0.1) 0.47ms
+INFO:tornado.access:200 POST /env/faster-rcnn (127.0.0.1) 0.59ms
+INFO:tornado.access:200 POST /env/faster-rcnn (127.0.0.1) 0.42ms
+INFO:tornado.access:200 POST /env/faster-rcnn (127.0.0.1) 0.56ms
+/home/tim/.local/lib/python3.8/site-packages/visdom/server.py:39: DeprecationWarning: zmq.eventloop.ioloop is deprecated in pyzmq 17. pyzmq now works with default tornado and asyncio eventloops.
+  ioloop.install()  # Needs to happen before any tornado imports!
+INFO:root:Application Started
+INFO:tornado.access:200 POST /env/faster-rcnn (127.0.0.1) 0.45ms
+INFO:tornado.access:200 POST /env/faster-rcnn (127.0.0.1) 0.30ms
+INFO:tornado.access:200 POST /env/faster-rcnn (127.0.0.1) 0.45ms
+INFO:tornado.access:200 POST /env/faster-rcnn (127.0.0.1) 0.31ms
+INFO:tornado.access:200 POST /env/faster-rcnn (127.0.0.1) 0.40ms
+INFO:tornado.access:200 POST /env/faster-rcnn (127.0.0.1) 0.30ms
+INFO:tornado.access:200 POST /env/faster-rcnn (127.0.0.1) 0.44ms
+INFO:tornado.access:200 POST /env/faster-rcnn (127.0.0.1) 0.29ms
+INFO:tornado.access:200 POST /env/faster-rcnn (127.0.0.1) 0.31ms
+INFO:tornado.access:200 POST /env/faster-rcnn (127.0.0.1) 0.31ms
+INFO:tornado.access:200 POST /env/faster-rcnn (127.0.0.1) 0.35ms
+INFO:tornado.access:200 POST /env/faster-rcnn (127.0.0.1) 0.46ms
+INFO:tornado.access:200 POST /env/faster-rcnn (127.0.0.1) 0.33ms
+INFO:tornado.access:200 POST /env/faster-rcnn (127.0.0.1) 0.32ms
+INFO:tornado.access:200 POST /env/faster-rcnn (127.0.0.1) 0.34ms
+INFO:tornado.access:200 POST /env/faster-rcnn (127.0.0.1) 0.61ms
+INFO:tornado.access:200 POST /env/faster-rcnn (127.0.0.1) 0.40ms
+INFO:tornado.access:200 POST /env/faster-rcnn (127.0.0.1) 0.39ms
+INFO:tornado.access:200 POST /env/faster-rcnn (127.0.0.1) 0.30ms
+INFO:tornado.access:200 POST /env/faster-rcnn (127.0.0.1) 0.29ms
+INFO:tornado.access:200 POST /env/faster-rcnn (127.0.0.1) 0.28ms
+/home/tim/.local/lib/python3.8/site-packages/visdom/server.py:39: DeprecationWarning: zmq.eventloop.ioloop is deprecated in pyzmq 17. pyzmq now works with default tornado and asyncio eventloops.
+  ioloop.install()  # Needs to happen before any tornado imports!
+INFO:root:Application Started
+INFO:tornado.access:200 POST /env/faster-rcnn (127.0.0.1) 0.37ms
+/home/tim/.local/lib/python3.8/site-packages/visdom/server.py:39: DeprecationWarning: zmq.eventloop.ioloop is deprecated in pyzmq 17. pyzmq now works with default tornado and asyncio eventloops.
+  ioloop.install()  # Needs to happen before any tornado imports!
+INFO:root:Application Started
+INFO:tornado.access:200 POST /env/faster-rcnn (127.0.0.1) 0.44ms
+/home/tim/.local/lib/python3.8/site-packages/visdom/server.py:39: DeprecationWarning: zmq.eventloop.ioloop is deprecated in pyzmq 17. pyzmq now works with default tornado and asyncio eventloops.
+  ioloop.install()  # Needs to happen before any tornado imports!
+INFO:root:Application Started
+INFO:tornado.access:200 POST /env/faster-rcnn (127.0.0.1) 0.35ms
+/home/tim/.local/lib/python3.8/site-packages/visdom/server.py:39: DeprecationWarning: zmq.eventloop.ioloop is deprecated in pyzmq 17. pyzmq now works with default tornado and asyncio eventloops.
+  ioloop.install()  # Needs to happen before any tornado imports!
+INFO:root:Application Started
+INFO:tornado.access:200 POST /env/faster-rcnn (127.0.0.1) 0.33ms
+/home/tim/.local/lib/python3.8/site-packages/visdom/server.py:39: DeprecationWarning: zmq.eventloop.ioloop is deprecated in pyzmq 17. pyzmq now works with default tornado and asyncio eventloops.
+  ioloop.install()  # Needs to happen before any tornado imports!
+INFO:root:Application Started
+INFO:tornado.access:200 POST /env/faster-rcnn (127.0.0.1) 0.49ms
+INFO:tornado.access:200 POST /env/faster-rcnn (127.0.0.1) 0.34ms
+INFO:tornado.access:200 POST /env/faster-rcnn (127.0.0.1) 0.29ms
+INFO:tornado.access:200 POST /env/faster-rcnn (127.0.0.1) 0.34ms
+INFO:tornado.access:200 POST /env/faster-rcnn (127.0.0.1) 0.31ms
+INFO:tornado.access:200 POST /env/faster-rcnn (127.0.0.1) 0.36ms
+INFO:tornado.access:200 POST /env/faster-rcnn (127.0.0.1) 0.34ms
+INFO:tornado.access:200 POST /env/faster-rcnn (127.0.0.1) 0.41ms
+INFO:tornado.access:200 POST /env/faster-rcnn (127.0.0.1) 0.38ms
+INFO:tornado.access:200 POST /env/faster-rcnn (127.0.0.1) 0.35ms
+INFO:tornado.access:200 POST /env/faster-rcnn (127.0.0.1) 0.35ms
+/home/tim/.local/lib/python3.8/site-packages/visdom/server.py:39: DeprecationWarning: zmq.eventloop.ioloop is deprecated in pyzmq 17. pyzmq now works with default tornado and asyncio eventloops.
+  ioloop.install()  # Needs to happen before any tornado imports!
+INFO:root:Application Started
+INFO:tornado.access:200 POST /env/faster-rcnn (127.0.0.1) 0.42ms
+/home/tim/.local/lib/python3.8/site-packages/visdom/server.py:39: DeprecationWarning: zmq.eventloop.ioloop is deprecated in pyzmq 17. pyzmq now works with default tornado and asyncio eventloops.
+  ioloop.install()  # Needs to happen before any tornado imports!
+INFO:root:Application Started
+INFO:tornado.access:200 POST /env/faster-rcnn (127.0.0.1) 0.35ms
+INFO:tornado.access:200 POST /env/faster-rcnn (127.0.0.1) 0.34ms
+INFO:tornado.access:200 POST /env/faster-rcnn (127.0.0.1) 0.34ms
