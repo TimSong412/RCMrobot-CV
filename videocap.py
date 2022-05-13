@@ -12,7 +12,7 @@ while True:
         cv2.imshow("cam", frame)
         # vw.write(frame)
         if cv2.waitKey(33) == 115:
-            cv2.imwrite("circle0.jpg", frame)
+            # cv2.imwrite("circle0.jpg", frame)
             break
     else:
         break

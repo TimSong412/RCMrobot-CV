@@ -10,7 +10,8 @@ class Sender():
 
     def sendvec(self, x, y):
         self.sk.send((str(x)+','+str(y)).encode('UTF-8'))
-        print("SENT vector: (", x, ", ", y, ")")
+        self.sk.send(('['+str(x)+','+str(y)+']').encode('UTF-8'))
+        # print("SENT vector: (", x, ", ", y, ")")
 
     def close(self):
         self.sk.close()

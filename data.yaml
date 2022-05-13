@@ -1,0 +1,5 @@
+train: ./RCM_sim/train/images
+val: ./RCM_sim/valid/images
+
+nc: 2
+names: ['Dissecting forceps', 'electrocoagulation hook']

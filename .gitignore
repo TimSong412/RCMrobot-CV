@@ -130,3 +130,9 @@ dmypy.json
 
 # models
 checkpoints
+*.pt
+
+# media
+*.jpg
+*.mp4
+*.txt

@@ -9,23 +9,25 @@ import time
 import network
 
 DEBUG = True
-nowimg = None
+lastimg = None
 end = False
+CAMIDX = 4
 
 
 class cap(threading.Thread):
     def __init__(self):
-        global nowimg
+        global lastimg
         threading.Thread.__init__(self)
-        self.camera = cv2.VideoCapture(4)
-        ret, nowimg = self.camera.read()
+        self.camera = cv2.VideoCapture(CAMIDX)
+        ret, lastimg = self.camera.read()
+        print("INIT")
         if not ret:
             print("READ IMG ERROR")
 
     def run(self):
-        global nowimg
+        global lastimg
         while True:
-            ret, nowimg = self.camera.read()
+            ret, lastimg = self.camera.read()
             if ret:
                 time.sleep(0.003)
             else:
@@ -36,9 +38,9 @@ class cap(threading.Thread):
 
 class Loop():
     def __init__(self) -> None:
-        global nowimg
+        global lastimg
         self.Predictor = Circle()
-        self.preimg = nowimg.copy()
+        self.preimg = lastimg.copy()
         if DEBUG:
             cv2.imshow("ini_img", self.preimg)
             cv2.waitKey(0)
@@ -62,6 +64,7 @@ class Loop():
         totalmask = np.zeros(gray.shape[0:2], dtype=np.uint8)
         # totalmask[bbox[0]:bbox[2], bbox[1]:bbox[3]] = mask
         totalmask[bbox[0]:bbox[2], bbox[1]:bbox[3]] = 1
+        totalmask[int((bbox[0]+bbox[2])/2), int((bbox[1]+bbox[3])/2)] = 0
         if DEBUG:
             cv2.imshow("mask", totalmask*250)
         # (y, x)
@@ -81,13 +84,13 @@ class Loop():
 
 
 if __name__ == '__main__':
-    sender = network.Sender('192.168.137.216')
+    sender = network.Sender('192.168.137.187')
     cam = cap()
     cam.start()
     mainloop = Loop()
     while True:
         st = time.time()
-        newimg = nowimg.copy()
+        newimg = lastimg.copy()
         ed = time.time()
         print("cam= ", ed-st)
 
@@ -111,18 +114,27 @@ if __name__ == '__main__':
         # nomalization
         shift = mainloop.norm(shift)
         move = mainloop.norm(move)
+        
+        sender.sendvec(newcenter[0], newcenter[1])
+        print("center= ", newcenter)
+        '''
         if abs(shift[0]) < 0.004 and abs(shift[1]) < 0.004:
             if abs(move[0]) > 0.004 or abs(move[1]) > 0.004:
                 print("MOVE!")
-                sender.sendvec(move[0], move[1])
+                # sender.sendvec(move[0], move[1])
+                sender.sendvec(newcenter[0], newcenter[1])
+                print("center= ", newcenter)
             # mainloop.refresh(newimg, newgray, newmask)
                 pass
             else:
                 print("CONVERGE!")
         else:
             print("SHIFT!")
-            sender.sendvec(shift[0], shift[1])
+            # sender.sendvec(shift[0], shift[1])
+            sender.sendvec(newcenter[0], newcenter[1])
+            print("center= ", newcenter)
             pass
+        '''
 
         if cv2.waitKey(500) == 115:
             end = True
