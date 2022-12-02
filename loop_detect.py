@@ -35,7 +35,7 @@ class cap(threading.Thread):
 
 
 if __name__ == '__main__':
-    sender = network.Sender('192.168.238.158')
+    sender = network.Sender('192.168.10.194')
     cam = cap()
     cam.start()
     detector = Detector(classes=[0, 1])
